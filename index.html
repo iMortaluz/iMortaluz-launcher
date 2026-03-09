@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMortaluz Launcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <div class="logo">
+            <img src="./assets/logo.svg" alt="iMortaluz Logo" />
+            <span class="logo-text">iMortaluz Launcher</span>
+        </div>
+        <nav>
+            <a href="#features" class="nav-link">
+                <span class="nav-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3H3v7h7V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M21 3h-7v7h7V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M21 14h-7v7h7v-7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M10 14H3v7h7v-7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                Özellikler
+            </a>
+            <a href="#download" class="nav-link">
+                <span class="nav-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="m7 11 5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                İndir
+            </a>
+            <a href="#faq" class="nav-link">
+                <span class="nav-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 18h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 2.5-2.5 2-2.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </span>
+                SSS
+            </a>
+            <a href="https://discord.gg/2XKqbe5" target="_blank" rel="noreferrer" class="btn btn-discord-solid">Discord</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-flow" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="hero-copy">
+            <div class="badge badge-strong badge-hybrid" id="versionBadge">
+                <span class="hybrid-segment dot-segment">
+                    <span class="status-dot status-live"></span>
+                    <span class="hybrid-version" id="badgeVersionText">v1.0.0</span>
+                </span>
+                <span class="hybrid-divider"></span>
+                <span class="hybrid-segment status-segment">
+                    <span class="hybrid-status" id="badgeStatusText">Yayında</span>
+                </span>
+                <span class="hybrid-shimmer"></span>
+            </div>
+            <h1><span class="hero-brand">iMortaluz Launcher</span> ile Minecraft dünyana <span class="hero-tagline">fark kat</span></h1>
+            <div class="hero-subtitle">iMortaluz Launcher</div>
+            <p>FPS artışı, özel mod paketleri, otomatik güncellemeler ve topluluğa özel etkinliklerle iMortaluz deneyimini bir üst seviyeye taşı.</p>
+            <div class="hero-actions">
+                <a href="https://github.com/iMortaluz/minecraft-duyuru/releases/latest/download/iMortaluzLauncherSetup.exe" class="btn btn-primary" id="downloadButton">Ücretsiz İndir</a>
+                <a href="#features" class="btn btn-ghost">Keşfet</a>
+            </div>
+            <p class="cta-note">Desteklenen platformlar: Windows 10/11 • 64-bit • .NET 6.0</p>
+            <div class="stats">
+                <div>
+                    <strong>%100</strong>
+                    <span>Güvenli</span>
+                </div>
+                <div>
+                    <strong>%100</strong>
+                    <span>Ücretsiz</span>
+                </div>
+                <div>
+                    <strong>%100</strong>
+                    <span>Türkçe</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="screen" id="heroFrame">
+                <img id="heroImage" src="./assets/hero-1.png" alt="Launcher ekran görüntüsü">
+            </div>
+            <div class="glow"></div>
+        </div>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container">
+        <h2>Öne Çıkan Özellikler</h2>
+        <div class="feature-grid">
+            <article>
+                <h3>Mini Oyun Modülü</h3>
+                <p>Sunucuya bağlanmayı beklerken launcher içinde küçük oyunlar oynayarak vakit geçir.</p>
+            </article>
+            <article>
+                <h3>Canlı Etkinlik Takvimi</h3>
+                <p>Tüm turnuvalar ve ödüller launcher’daki takvimde listelenir.</p>
+            </article>
+            <article>
+                <h3>Görev & Başarım Sistemi</h3>
+                <p>Launcher içindeki etkileşimlerinden puan kazan, profilini öne çıkar.</p>
+            </article>
+            <article>
+                <h3>Dinamik Profil Temaları</h3>
+                <p>Sunucudaki rütbene göre arayüz renk paleti otomatik değişir, profilin canlı kalır.</p>
+            </article>
+            <article>
+                <h3>Arkadaşlık Sistemi</h3>
+                <p>Kimlerin çevrimiçi olduğunu gör, arkadaş ekle ve toplulukla sohbeti sürdür.</p>
+            </article>
+            <article>
+                <h3>Offline & Misafir Modu</h3>
+                <p>Kayıt olmadan launcher’ı keşfet veya internet yokken kaydettiğin dünyaları aç.</p>
+            </article>
+            <article>
+                <h3>Sessiz Güncelleme Motoru</h3>
+                <p>Launcher her açılışta sürümü kontrol eder, yeni setup’ı indirip aynı klasöre otomatik kurar.</p>
+            </article>
+            <article>
+                <h3>Güvenli Giriş</h3>
+                <p>Gelişmiş kimlik doğrulama protokolü hesaplarını korur, bilgiler güvende kalır.</p>
+            </article>
+            <article>
+                <h3>Launcher Haber Merkezi</h3>
+                <p>VIP kampanyaları, sürüm notları ve blog haberleri tek akışta launcher’a düşer.</p>
+            </article>
+            <article>
+                <h3>Hafif & Hızlı WPF Arayüz</h3>
+                <p>Modern WPF tasarımı düşük kaynak tüketir ve akıcı bir deneyim sunar.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="download" id="download">
+    <div class="container">
+        <div class="download-header">
+            <div class="download-pill">
+                <span class="nav-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="m7 11 5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                İndirme
+            </div>
+            <h2><span class="accent">iMortaluz Launcher</span> indir</h2>
+            <p>Hemen indir ve tüm avantajları hesabına yükle!</p>
+        </div>
+
+        <div class="download-grid">
+            <div class="download-info">
+                <div class="info-row">
+                    <div class="info-icon">🏷️</div>
+                    <div>
+                        <div class="info-title">Son Sürüm</div>
+                        <div class="info-value" id="latestVersionText">v1.0.0</div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-icon">🗓️</div>
+                    <div>
+                        <div class="info-value">
+                            <a class="btn btn-ghost btn-small" id="releaseNotesButton" href="https://imortaluz.com" target="_blank" rel="noreferrer">Sürüm Notları</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-icon">⚙️</div>
+                    <div>
+                        <div class="info-title">Gereksinimler</div>
+                        <div class="info-value">Windows 10/11 • 4GB RAM</div>
+                    </div>
+                </div>
+                <div class="info-notes" id="releaseNotes">Son sürüm notları hazırlanıyor...</div>
+            </div>
+
+            <div class="download-platform">
+                <h3>Platform Seçin</h3>
+                <div class="platform-item">
+                    <div class="platform-left">
+                        <div class="platform-logo" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 5.2 11 4v7H3V5.2Z" fill="currentColor" opacity="0.95"/>
+                                <path d="M13 3.75 21 2.7V11h-8V3.75Z" fill="currentColor" opacity="0.85"/>
+                                <path d="M3 13h8v7L3 18.8V13Z" fill="currentColor" opacity="0.8"/>
+                                <path d="M13 13h8v8.3l-8-1.05V13Z" fill="currentColor" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="platform-name">Windows</div>
+                            <div class="platform-file" id="platformFileName">iMortaluzLauncherSetup.exe</div>
+                        </div>
+                    </div>
+                    <a href="https://github.com/iMortaluz/minecraft-duyuru/releases/latest/download/iMortaluzLauncherSetup.exe" class="btn btn-primary btn-small" id="downloadButtonSecondary">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="m7 11 5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        İndir
+                    </a>
+                </div>
+                <div class="platform-item is-disabled">
+                    <div class="platform-left">
+                        <div class="platform-logo" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 12.2c-.02-2.2 1.8-3.2 1.9-3.3-1.05-1.5-2.7-1.7-3.2-1.7-1.36-.14-2.65.8-3.34.8-.7 0-2.1-.78-3.45-.76-1.77.03-3.4 1.03-4.32 2.62-1.85 3.22-.47 8 1.32 10.62.88 1.28 1.94 2.72 3.32 2.68 1.32-.05 1.8-.86 3.39-.86 1.58 0 2.02.86 3.41.83 1.4-.03 2.29-1.3 3.14-2.59.98-1.43 1.39-2.82 1.4-2.89-.03-.01-2.68-1.02-2.69-4.02Zm-2.51-7.38c.62-.75 1.04-1.79.92-2.82-.89.04-1.96.59-2.6 1.33-.57.66-1.07 1.72-.94 2.73.99.08 2-.51 2.62-1.24Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="platform-name">macOS</div>
+                            <div class="platform-file">Apple Silicon & Intel</div>
+                        </div>
+                    </div>
+                    <span class="badge badge-soon">Planlanıyor</span>
+                </div>
+                <div class="platform-item is-disabled">
+                    <div class="platform-left">
+                        <div class="platform-logo" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m5 19 3-8-3-6 14 6-14 8Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="platform-name">Linux</div>
+                            <div class="platform-file">AppImage • Flatpak</div>
+                        </div>
+                    </div>
+                    <span class="badge badge-soon">Planlanıyor</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq" id="faq">
+    <div class="container">
+        <h2>Sık Sorulan Sorular</h2>
+        <div class="faq-grid">
+            <article class="faq-card">
+                <div class="faq-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3 5 6v4c0 4.5 3 8.5 7 9.8 4-1.3 7-5.3 7-9.8V6l-7-3Z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>Kullanmak güvenli mi?</h3>
+                    <p>Evet. Launcher güvenlik odaklı geliştirildi; zararlı yazılım veya istenmeyen bileşen içermez. Yayınlanan dosyalar doğrulama kontrolleriyle dağıtılır.</p>
+                </div>
+            </article>
+            <article class="faq-card">
+                <div class="faq-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 4v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                        <path d="m8 10 4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>iMortaluz Launcher nasıl kurulur?</h3>
+                    <p>İşletim sistemin için uygun yükleyiciyi indir, kurulum sihirbazındaki adımları izle. Kurulumdan sonra launcher üzerinden oyunu başlatabilirsin.</p>
+                </div>
+            </article>
+            <article class="faq-card">
+                <div class="faq-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="8" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.4" fill="none"/>
+                        <path d="M12 4v16" stroke="currentColor" stroke-width="1.4"/>
+                        <path d="M3 12h18" stroke="currentColor" stroke-width="1.4"/>
+                        <path d="M9 4c-1.1 0-2 .9-2 2s.9 2 2 2h2V6c0-1.1-.9-2-2-2Zm6 0c1.1 0 2 .9 2 2s-.9 2-2 2h-2V6c0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>iMortaluz Launcher ücretli mi?</h3>
+                    <p>Hayır. iMortaluz Launcher ücretsiz olarak indirilebilir ve kullanılabilir. Herkesin sorunsuz bir oyun deneyimine ulaşabilmesini hedefliyoruz.</p>
+                </div>
+            </article>
+            <article class="faq-card">
+                <div class="faq-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16.5 8.5V5h3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M7.5 15.5V19H4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M20 9a8 8 0 0 0-13.5-3.5L5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M4 15a8 8 0 0 0 13.5 3.5L19 17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>Yeni sürümler nasıl yükleniyor?</h3>
+                    <p>Launcher açılışta güncellemeyi kontrol eder. Yeni sürüm varsa indirir ve kurulum sürecini otomatik şekilde tamamlar.</p>
+                </div>
+            </article>
+            <article class="faq-card">
+                <div class="faq-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="4" y="6" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.4" fill="none"/>
+                        <path d="M4 10h16" stroke="currentColor" stroke-width="1.4"/>
+                        <path d="M8 3v4m8-4v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>Ne sıklıkla güncelleme geliyor?</h3>
+                    <p>Geliştirme hızına göre değişir; genelde düzenli aralıklarla yeni sürümler yayınlıyoruz. Büyük iyileştirmelerde daha sık güncelleme görebilirsin.</p>
+                </div>
+            </article>
+            <article class="faq-card">
+                <div class="faq-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 18v3l3-3h11a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+                        <circle cx="9" cy="11" r="1" fill="currentColor"/>
+                        <circle cx="12" cy="11" r="1" fill="currentColor"/>
+                        <circle cx="15" cy="11" r="1" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3>Destek alabilir miyim?</h3>
+                    <p>Elbette. Discord topluluğumuz üzerinden her zaman bize ulaşabilirsin; sorun giderme ve öneriler için aktif destek sağlıyoruz.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <span>© <span id="year"></span> iMortaluz. Tüm hakları saklıdır.</span>
+        <div class="footer-links">
+            <a href="mailto:info@imortaluz.com">Destek</a>
+            <a href="https://discord.gg/2XKqbe5" target="_blank" rel="noreferrer">Discord</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
